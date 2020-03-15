@@ -1,0 +1,17 @@
+<header>
+  <div class="header-border gradient"></div>
+  <div class="header-content">
+    <h1>
+      <a routerLink="/">Carole Rivera</a>
+    </h1>
+    <nav>
+      <ul>
+        <li *ngFor="let link of links">
+          <a class="main-nav-link" [routerLink]="[link.url]">
+            {{ link.display }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

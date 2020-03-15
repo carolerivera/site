@@ -1,0 +1,10 @@
+<div class="grid-container">
+  <div class="category-grid">
+    <div *ngFor="let image of images; let i = index" [ngClass]="getImageClass(i)">
+      <a [routerLink]="[image.url]">
+        <img [src]="image.src" [alt]="image.alt">
+        <h2>{{ image.caption }}</h2>
+      </a>
+    </div>
+  </div>
+</div>

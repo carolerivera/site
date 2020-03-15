@@ -1,0 +1,40 @@
+* {
+  font-family: $font-sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-serif;
+  > * {
+    font-family: $font-serif;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $anchor-color;
+  cursor: pointer;
+
+  &::hover {
+    text-decoration: underline;
+    color: darken($anchor-color, 20%);
+  }
+}
+
+.gradient {
+  background: $gradient-light;
+  background: -webkit-linear-gradient(
+    left top,
+    $gradient-dark,
+    $gradient-light
+  );
+  background: -o-linear-gradient(bottom right, $gradient-dark, $gradient-light);
+  background: -moz-linear-gradient(
+    bottom right,
+    $gradient-dark,
+    $gradient-light
+  );
+  background: linear-gradient(to bottom right, $gradient-dark, $gradient-light);
+}
